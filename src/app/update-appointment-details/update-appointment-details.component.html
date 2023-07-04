@@ -1,0 +1,54 @@
+<div class="container">
+  <h1>Update Appointment</h1>
+
+  <form (submit)="submitForm()">
+    <div class="form-group">
+      <label for="patientName">Patient Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="patientName"
+        [(ngModel)]="appointment.patientName"
+        name="patientName"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="appointmentDate">Appointment Date</label>
+      <input
+        type="date"
+        class="form-control"
+        id="appointmentDate"
+        [(ngModel)]="appointment.date"
+        name="appointmentDate"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="appointmentTime">Appointment Time</label>
+      <input
+        type="time"
+        class="form-control"
+        id="appointmentTime"
+        [(ngModel)]="appointment.time"
+        name="appointmentTime"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="notes">Notes</label>
+      <textarea
+        class="form-control"
+        id="notes"
+        rows="3"
+        [(ngModel)]="appointment.notes"
+        name="notes"
+      ></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">update</button>
+  </form>
+</div>

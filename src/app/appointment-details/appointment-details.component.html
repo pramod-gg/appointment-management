@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Appointment Details</h1>
+
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Patient Name: {{ appointment.patientName }}</h5>
+      <p class="card-text">Date: {{ appointment.date }}</p>
+      <p class="card-text">Time: {{ appointment.time }}</p>
+      <p class="card-text">Notes: {{ appointment.notes }}</p>
+    </div>
+  </div>
+  <!-- add a button to delete the appointment -->
+  <button class="btn btn-danger" (click)="deleteAppointment()">
+    Delete Appointment
+  </button>
+</div>

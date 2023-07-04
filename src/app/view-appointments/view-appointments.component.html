@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>View Appointments</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Patient Name</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let appointment of appointments">
+        <td>{{ appointment.patientName }}</td>
+        <td>{{ appointment.date }}</td>
+        <td>{{ appointment.time }}</td>
+        <td>
+          <a
+            routerLink="/appointment-details/{{ appointment.id }}"
+            class="btn btn-primary btn-sm"
+            >View Details</a
+          >
+        </td>
+        <td>
+          <a
+            routerLink="/update-appointment-details/{{ appointment.id }}"
+            class="btn btn-primary btn-sm"
+            >Edit Appointment</a
+          >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
